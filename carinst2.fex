@@ -1,0 +1,14 @@
+-*-----------------------------------------------------------------------------*
+-* Copyright (c) Information Builders, Inc. All rights reserved. @MFSM_NOPROLOG@
+-*FEX_DESCRIPTION=Legacy Sample: Drilldown Report using & variable against CAR
+-*-----------------------------------------------------------------------------*
+
+TABLE FILE CAR
+HEADING CENTER
+"Sample Drilldown Report"
+"for Car MODEL: <MODEL"
+PRINT COUNTRY CAR MODEL
+IF MODEL EQ '&MODEL'
+ON TABLE SET SHORTPATH SQL
+ON TABLE PCHOLD FORMAT HTML
+END
